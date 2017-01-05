@@ -18,7 +18,11 @@ yarn
 install dependencies by composer
 
 ```
-composer update or composer update --no-scripts
+composer update
+```
+or
+```
+composer update --no-scripts
 ```
 
 ## About Laravel
