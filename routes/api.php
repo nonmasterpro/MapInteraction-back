@@ -26,6 +26,10 @@ Route::get('/user', function (Request $request) {
 //     Route::get('/{place}', 'Api\PlaceController@show');
 // });
 
+Route::resource('users', 'UserController', [
+    'middleware' => 'jwt.auth'
+]);
+
 Route::resource('places', 'PlaceController', [
     'middleware' => 'jwt.auth'
 ]);
