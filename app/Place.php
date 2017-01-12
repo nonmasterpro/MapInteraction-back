@@ -2,12 +2,13 @@
 
 namespace App;
 
+use App\Elegant as Elegant;
 use Illuminate\Database\Eloquent\Model;
 
-class Place extends Model
+class Place extends Elegant
 {
 
-    private $rules = array(
+    protected $rules = array(
         'name' => 'required',
         'description'  => 'required',
         'x' => 'required',
@@ -20,4 +21,5 @@ class Place extends Model
     public function Images() {
         return $this‐>hasMany('App\Image');
     }
+
 }
