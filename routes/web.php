@@ -12,16 +12,5 @@
 */
 
 Route::get('/', function () {
-    return csrf_token();
-});
-
-Route::get('/token', function () {
-    return csrf_token();
-});
-
-Route::post('/test', function () {
-    return response()->json([
-        'name' => 'Abigail',
-        'state' => 'CA'
-    ]);
+    return '';
 });
