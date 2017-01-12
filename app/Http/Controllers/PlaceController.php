@@ -38,6 +38,10 @@ class PlaceController extends Controller
     {
         $place = new Place;
 
+        if(  ) {
+
+        }
+
         $place->name = $request->name;
         $place->description = $request->description;
         $place->x = $request->x;
