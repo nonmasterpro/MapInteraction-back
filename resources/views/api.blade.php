@@ -14,6 +14,21 @@
 </head>
 <body>
   <ul>
+    <h3>AUTH /api/auth</h3>
+    <li>
+      <div class="head">
+        POST /
+      </div>
+      login
+    </li>
+    <li>
+      <div class="head">
+        GET /me
+      </div>
+      get me
+    </li>
+  </ul>
+  <ul>
     <h3>USERS /api/users</h3>
     <li>
       <div class="head">
