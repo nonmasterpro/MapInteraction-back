@@ -19,7 +19,7 @@ class Place extends Elegant
     );
     
     public function Images() {
-        return $this‐>hasMany('App\Image');
+        return parent::hasMany('App\Image');
     }
 
 }

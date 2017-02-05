@@ -17,16 +17,15 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('jwt.auth');
 
-// Route::group([
-// 'middleware' => 'jwt.auth',
-// 'prefix' => 'places'
-// ], function () {
-//     Route::get('/', 'Api\PlaceController@index');
-//     Route::post('/', 'Api\PlaceController@store');
-//     Route::get('/{place}', 'Api\PlaceController@show');
-// });
+Route::resource('users', 'UserController', [
+    'middleware' => 'jwt.auth'
+]);
 
 Route::resource('places', 'PlaceController', [
+    'middleware' => 'jwt.auth'
+]);
+
+Route::resource('images', 'ImageController', [
     'middleware' => 'jwt.auth'
 ]);
 

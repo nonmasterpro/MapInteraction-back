@@ -2,10 +2,10 @@
 
 namespace App;
 
+use App\UserElegant as UserElegant;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends UserElegant
 {
     use Notifiable;
 
@@ -17,6 +17,11 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password',
     ];
+
+    protected $rules = array(
+        'name' => 'required',
+        'email'  => 'required'
+    );
 
     /**
      * The attributes that should be hidden for arrays.

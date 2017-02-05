@@ -16,9 +16,11 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fileName');
-            $table->binary('content');
-            $table->string('contentType');
-            $table->uuid('places');
+
+            $table->integer('place_id')->unsigned()->nullable();
+            $table->foreign('place_id')->references('id')->on('images')
+                ->onUpdate('cascade')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

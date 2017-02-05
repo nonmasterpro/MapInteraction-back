@@ -8,11 +8,16 @@ class Image extends Model
 {
     protected $fillable = [
         'fileName',
-        'content',
-        'contentType',
     ];
 
     public function place() {
-        return $this->belongsTo('Place');
+        return $this->belongsTo('App\Place');
+    }
+
+    public function toArray() {
+        $data = parent::toArray();
+        $data['place'] = ($this->place) ? $this->place: null;
+
+        return $data;
     }
 }
