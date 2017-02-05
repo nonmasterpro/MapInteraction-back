@@ -19,11 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('roleName');
             $table->rememberToken();
             $table->timestamps();
         });
 
-        $user = ['name' => 'Veerapat In-ongkarn','email' => 'karjkeng@hotmail.com','password' => bcrypt('karjkeng')];
+        $user = ['name' => 'Veerapat In-ongkarn','email' => 'karjkeng@hotmail.com','password' => bcrypt('karjkeng'), 'roleName' => 'admin'];
         $db = DB::table('users')->insert($user);
     }
 

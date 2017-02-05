@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class UserController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return response()->json($users);
+        //
     }
 
     /**
@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        // 
+        //
     }
 
     /**
@@ -36,21 +36,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        $user = new User();
-        
-        if ($user->validate($input)) {
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->password = bcrypt($request->password);
+        // $this->validate($request, [
+        //     'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
 
-            $user->save();
+        $imageName = time().'.'.$request->file->getClientOriginalExtension();
+        $request->file->move(public_path('images'), $imageName);
 
-            return response()->json($user);
-        } else {
-            $errors = $user->errors();
-            return response()->json($errors);
-        }
+        $image = new Image();
+        $image->fileName = $imageName;
+        $image->place_id = 1;
+
+        $image->save();
+
+        return response()->json($image);
     }
 
     /**
@@ -61,8 +60,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-        return response()->json($user);
+        $image = Image::find($id);
+        return response()->json($image);
     }
 
     /**
@@ -85,23 +84,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $input = $request->all();
-        $user = User::find($id);
-        
-        if ($user->validate($input)) {
-            $user->name = $request->name;
-            $user->email = $request->email;
-            if(empty($request->password)) {
-                $user->password = bcrypt($request->password);
-            }
-
-            $user->save();
-
-            return response()->json($user);
-        } else {
-            $errors = $user->errors();
-            return response()->json($errors);
-        }
+        //
     }
 
     /**
@@ -112,7 +95,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
-        $user->delete();
+        //
     }
 }
