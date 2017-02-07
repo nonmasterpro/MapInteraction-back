@@ -17,9 +17,12 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('fileName');
 
-            $table->integer('place_id')->unsigned()->nullable();
-            $table->foreign('place_id')->references('id')->on('images')
-                ->onUpdate('cascade')->onDelete('cascade');
+            // $table->integer('place_id')->unsigned()->nullable();
+            // // $table->foreign('place_id')->references('id')->on('images')->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreign('place_id')->references('id')->on('images')->onDelete('cascade');
+            // $table->dropForeign('place_id');
+            $table->unsignedInteger('place_id')->nullable();
+            $table->foreign('place_id')->references('id')->on('images')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });
