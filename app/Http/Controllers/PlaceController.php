@@ -18,7 +18,7 @@ class PlaceController extends Controller
         $places = Place::with("images")->get();
         return response()->json($places);
     }
-    
+
     /**
     * Show the form for creating a new resource.
     *
@@ -28,7 +28,7 @@ class PlaceController extends Controller
     {
         //
     }
-    
+
     /**
     * Store a newly created resource in storage.
     *
@@ -39,7 +39,7 @@ class PlaceController extends Controller
     {
         $input = $request->all();
         $place = new Place();
-        
+
         if ($place->validate($input)) {
             $place->name = $request->name;
             $place->description = $request->description;
@@ -51,13 +51,23 @@ class PlaceController extends Controller
 
             $place->save();
 
+            if(isset($request->images)) {
+              $images = $request->images;
+              foreach ($images as $imageId) {
+                $image = Image::find($imageId);
+                $image->place_id = $place->id;
+                $image->save();
+              }
+            }
+
+            $place::with("images")->get();
             return response()->json($place);
         } else {
             $errors = $place->errors();
             return response()->json($errors);
         }
     }
-    
+
     /**
     * Display the specified resource.
     *
@@ -70,7 +80,7 @@ class PlaceController extends Controller
         $place = $place::with("images")->get();
         return response()->json($place);
     }
-    
+
     /**
     * Show the form for editing the specified resource.
     *
@@ -81,7 +91,7 @@ class PlaceController extends Controller
     {
         //
     }
-    
+
     /**
     * Update the specified resource in storage.
     *
@@ -93,7 +103,7 @@ class PlaceController extends Controller
     {
         $input = $request->all();
         $place = Place::find($id);
-        
+
         if ($place->validate($input)) {
             $place->name = $request->name;
             $place->description = $request->description;
@@ -111,7 +121,7 @@ class PlaceController extends Controller
             return response()->json($errors);
         }
     }
-    
+
     /**
     * Remove the specified resource from storage.
     *
