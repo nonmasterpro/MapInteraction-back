@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Image;
+use App\Subject;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class ImageController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,40 +35,27 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request, [
-        //     'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-
-        $imageName = time().'.'.$request->file->getClientOriginalExtension();
-        $request->file->move(public_path('images'), $imageName);
-
-        $image = new Image();
-        $image->fileName = $imageName;
-
-        $image->save();
-
-        return response()->json($image);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Subject $subject)
     {
-        $image = Image::find($id);
-        return response()->json($image);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Subject $subject)
     {
         //
     }
@@ -78,10 +64,10 @@ class ImageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Subject $subject)
     {
         //
     }
@@ -89,10 +75,10 @@ class ImageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Subject $subject)
     {
         //
     }
