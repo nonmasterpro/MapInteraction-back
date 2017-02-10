@@ -16,6 +16,18 @@ class UserController extends Controller
   *
   * @return \Illuminate\Http\Response
   */
+  /**
+   * @api {get} /users/:id Request User information
+   * @apiName GetUser
+   * @apiGroup User
+   *
+   * @apiParam {Number} id Users unique ID.
+   *
+   * @apiSuccess {String} name Fullname of the User.
+   * @apiSuccess {String} email  Email of the User.
+   * @apiSuccess {String} password  Password of the User.
+   * @apiSuccess {String} roleName  Role name of the User.
+   */
   public function index(Request $request)
   {
     $users = User::all();

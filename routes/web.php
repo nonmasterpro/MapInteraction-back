@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('api');
 });
+
+Route::get('/docs', function () {
+    return view('docs');
+});
