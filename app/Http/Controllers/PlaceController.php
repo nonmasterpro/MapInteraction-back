@@ -130,7 +130,7 @@ class PlaceController extends Controller
     */
     public function destroy($id)
     {
-        $place = User::find($id);
-        $place->delete();
+        $place = Place::destroy($id);
+        return response()->json($place);
     }
 }
