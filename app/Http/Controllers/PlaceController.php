@@ -13,6 +13,28 @@ class PlaceController extends Controller
     *
     * @return \Illuminate\Http\Response
     */
+  /**
+   * @api {get} /places 1. Get List of Places
+   * @apiName GetPlaces
+   * @apiGroup Place
+   * 
+   * @apiSuccess {Number} id Place unique ID.
+   * @apiSuccess {String} name Name of the Place.
+   * @apiSuccess {String} description  Description of the Place.
+   * @apiSuccess {Number} x  Lat of the Place.
+   * @apiSuccess {Number} y  Lng of the Place.
+   * @apiSuccess {String} contact  Contact of the Place.
+   * @apiSuccess {String} website  Website of the Place.
+   * @apiSuccess {String} type  Type of the Place.
+   * @apiSuccess {String} created_at  Datetime of place created.
+   * @apiSuccess {String} updated_at  Datetime of place updated.
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     [
+   *        { ... },
+   *        ....
+   *     ]
+   */
     public function index()
     {
         $places = Place::with("images")->get();
@@ -35,6 +57,33 @@ class PlaceController extends Controller
     * @param  \Illuminate\Http\Request  $request
     * @return \Illuminate\Http\Response
     */
+  /**
+   * @api {post} /places Store Place Information
+   * @apiName PostPlace
+   * @apiGroup Place
+   * 
+   * @apiParam {String} name Name of the Place.
+   * @apiParam {String} description  Description of the Place.
+   * @apiParam {Number} x  Lat of the Place.
+   * @apiParam {Number} y  Lng of the Place.
+   * @apiParam {String} contact  Contact of the Place.
+   * @apiParam {String} website  Website of the Place.
+   * @apiParam {String} type  Type of the Place.
+   *
+   * @apiSuccess {Number} id Place unique ID.
+   * @apiSuccess {String} name Name of the Place.
+   * @apiSuccess {String} description  Description of the Place.
+   * @apiSuccess {Number} x  Lat of the Place.
+   * @apiSuccess {Number} y  Lng of the Place.
+   * @apiSuccess {String} contact  Contact of the Place.
+   * @apiSuccess {String} website  Website of the Place.
+   * @apiSuccess {String} type  Type of the Place.
+   * @apiSuccess {String} created_at  Datetime of place created.
+   * @apiSuccess {String} updated_at  Datetime of place updated.
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     { ... }
+   */
     public function store(Request $request)
     {
         $input = $request->all();
@@ -74,6 +123,27 @@ class PlaceController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
+  /**
+   * @api {get} /places/:id Get Place Information
+   * @apiName GetPlace
+   * @apiGroup Place
+   * 
+   * @apiParam {Number} id Place unique ID.
+   *
+   * @apiSuccess {Number} id Place unique ID.
+   * @apiSuccess {String} name Name of the Place.
+   * @apiSuccess {String} description  Description of the Place.
+   * @apiSuccess {Number} x  Lat of the Place.
+   * @apiSuccess {Number} y  Lng of the Place.
+   * @apiSuccess {String} contact  Contact of the Place.
+   * @apiSuccess {String} website  Website of the Place.
+   * @apiSuccess {String} type  Type of the Place.
+   * @apiSuccess {String} created_at  Datetime of place created.
+   * @apiSuccess {String} updated_at  Datetime of place updated.
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     { ... }
+   */
     public function show($id)
     {
         $place = Place::find($id);
@@ -99,6 +169,34 @@ class PlaceController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
+  /**
+   * @api {put} /places/:id Update Place Information
+   * @apiName PutPlace
+   * @apiGroup Place
+   * 
+   * @apiParam {Number} id Place unique ID.
+   * @apiParam {String} name Name of the Place.
+   * @apiParam {String} description  Description of the Place.
+   * @apiParam {Number} x  Lat of the Place.
+   * @apiParam {Number} y  Lng of the Place.
+   * @apiParam {String} contact  Contact of the Place.
+   * @apiParam {String} website  Website of the Place.
+   * @apiParam {String} type  Type of the Place.
+   *
+   * @apiSuccess {Number} id Place unique ID.
+   * @apiSuccess {String} name Name of the Place.
+   * @apiSuccess {String} description  Description of the Place.
+   * @apiSuccess {Number} x  Lat of the Place.
+   * @apiSuccess {Number} y  Lng of the Place.
+   * @apiSuccess {String} contact  Contact of the Place.
+   * @apiSuccess {String} website  Website of the Place.
+   * @apiSuccess {String} type  Type of the Place.
+   * @apiSuccess {String} created_at  Datetime of place created.
+   * @apiSuccess {String} updated_at  Datetime of place updated.
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     { ... }
+   */
     public function update(Request $request, $id)
     {
         $input = $request->all();
@@ -128,6 +226,27 @@ class PlaceController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
+  /**
+   * @api {delete} /places/:id Delete Place Information
+   * @apiName DeletePlace
+   * @apiGroup Place
+   * 
+   * @apiParam {Number} id Place unique ID.
+   *
+   * @apiSuccess {Number} id Place unique ID.
+   * @apiSuccess {String} name Name of the Place.
+   * @apiSuccess {String} description  Description of the Place.
+   * @apiSuccess {Number} x  Lat of the Place.
+   * @apiSuccess {Number} y  Lng of the Place.
+   * @apiSuccess {String} contact  Contact of the Place.
+   * @apiSuccess {String} website  Website of the Place.
+   * @apiSuccess {String} type  Type of the Place.
+   * @apiSuccess {String} created_at  Datetime of place created.
+   * @apiSuccess {String} updated_at  Datetime of place updated.
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     { ... }
+   */
     public function destroy($id)
     {
         $place = Place::destroy($id);

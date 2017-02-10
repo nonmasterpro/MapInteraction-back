@@ -74,6 +74,10 @@ class UserController extends Controller
    * @apiName PostUser
    * @apiGroup User
    *
+   * @apiParam {String} name Fullname of the User.
+   * @apiParam {String} email  Email of the User.
+   * @apiParam {String} roleName  Role name of the User.
+   *
    * @apiSuccess {Number} id Users unique ID.
    * @apiSuccess {String} name Fullname of the User.
    * @apiSuccess {String} email  Email of the User.
@@ -151,6 +155,9 @@ class UserController extends Controller
    * @apiGroup User
    *
    * @apiParam {Number} id Users unique ID.
+   * @apiParam {String} name Fullname of the User.
+   * @apiParam {String} email  Email of the User.
+   * @apiParam {String} roleName  Role name of the User.
    *
    * @apiSuccess {Number} id Users unique ID.
    * @apiSuccess {String} name Fullname of the User.
