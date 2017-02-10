@@ -17,16 +17,35 @@ class UserController extends Controller
   * @return \Illuminate\Http\Response
   */
   /**
-   * @api {get} /users/:id Request User information
-   * @apiName GetUser
+   * @api {get} /users 1. Get List of Users
+   * @apiName GetUsers
    * @apiGroup User
    *
-   * @apiParam {Number} id Users unique ID.
-   *
+   * @apiSuccess {Number} id Users unique ID.
    * @apiSuccess {String} name Fullname of the User.
    * @apiSuccess {String} email  Email of the User.
-   * @apiSuccess {String} password  Password of the User.
    * @apiSuccess {String} roleName  Role name of the User.
+   * @apiSuccess {String} created_at  Datetime of user created.
+   * @apiSuccess {String} updated_at  Datetime of user updated.
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     [{
+   *       "id": 1,
+   *       "name": "karj",
+   *       "email": "karj@hotmail.com",
+   *       "roleName": "Admin",
+   *       "created_at": "2017-02-09 16:59:25",
+   *       "updated_at": "2017-02-09 16:59:25"
+   *     }, {
+   *       "id": 2,
+   *       "name": "keng",
+   *       "email": "keng@hotmail.com",
+   *       "roleName": "User",
+   *       "created_at": "2017-02-09 16:59:25",
+   *       "updated_at": "2017-02-09 16:59:25"
+   *     },
+   *      ....
+   *     ]
    */
   public function index(Request $request)
   {
@@ -50,6 +69,18 @@ class UserController extends Controller
   * @param  \Illuminate\Http\Request  $request
   * @return \Illuminate\Http\Response
   */
+  /**
+   * @api {post} /users Store User information
+   * @apiName PostUser
+   * @apiGroup User
+   *
+   * @apiSuccess {Number} id Users unique ID.
+   * @apiSuccess {String} name Fullname of the User.
+   * @apiSuccess {String} email  Email of the User.
+   * @apiSuccess {String} roleName  Role name of the User.
+   * @apiSuccess {String} created_at  Datetime of user created.
+   * @apiSuccess {String} updated_at  Datetime of user updated.
+   */
   public function store(Request $request)
   {
     $input = $request->all();
@@ -76,6 +107,20 @@ class UserController extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
+  /**
+   * @api {get} /users/:id Request User information
+   * @apiName GetUser
+   * @apiGroup User
+   *
+   * @apiParam {Number} id Users unique ID.
+   *
+   * @apiSuccess {Number} id Users unique ID.
+   * @apiSuccess {String} name Fullname of the User.
+   * @apiSuccess {String} email  Email of the User.
+   * @apiSuccess {String} roleName  Role name of the User.
+   * @apiSuccess {String} created_at  Datetime of user created.
+   * @apiSuccess {String} updated_at  Datetime of user updated.
+   */
   public function show($id)
   {
     $user = User::find($id);
@@ -100,6 +145,20 @@ class UserController extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
+  /**
+   * @api {put} /users/:id Update User information
+   * @apiName PutUser
+   * @apiGroup User
+   *
+   * @apiParam {Number} id Users unique ID.
+   *
+   * @apiSuccess {Number} id Users unique ID.
+   * @apiSuccess {String} name Fullname of the User.
+   * @apiSuccess {String} email  Email of the User.
+   * @apiSuccess {String} roleName  Role name of the User.
+   * @apiSuccess {String} created_at  Datetime of user created.
+   * @apiSuccess {String} updated_at  Datetime of user updated.
+   */
   public function update(Request $request, $id)
   {
     $input = $request->all();
@@ -128,6 +187,20 @@ class UserController extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
+  /**
+   * @api {delete} /users/:id Delete User information
+   * @apiName DeleteUser
+   * @apiGroup User
+   *
+   * @apiParam {Number} id Users unique ID.
+   *
+   * @apiSuccess {Number} id Users unique ID.
+   * @apiSuccess {String} name Fullname of the User.
+   * @apiSuccess {String} email  Email of the User.
+   * @apiSuccess {String} roleName  Role name of the User.
+   * @apiSuccess {String} created_at  Datetime of user created.
+   * @apiSuccess {String} updated_at  Datetime of user updated.
+   */
   public function destroy($id)
   {
     $user = User::destroy($id);
