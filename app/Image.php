@@ -13,11 +13,4 @@ class Image extends Model
     public function place() {
         return $this->belongsTo('App\Place');
     }
-
-    public function toArray() {
-        $data = parent::toArray();
-        $data['place'] = ($this->place) ? $this->place: null;
-
-        return $data;
-    }
 }
