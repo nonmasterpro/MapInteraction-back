@@ -29,5 +29,13 @@ Route::resource('images', 'ImageController', [
     'middleware' => 'jwt.auth'
 ]);
 
+Route::resource('stations', 'BusStationController', [
+    'middleware' => 'jwt.auth'
+]);
+
+Route::resource('routes', 'BusRouteController', [
+    'middleware' => 'jwt.auth'
+]);
+
 Route::post('auth', 'Api\AuthController@authenticate');
 Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
