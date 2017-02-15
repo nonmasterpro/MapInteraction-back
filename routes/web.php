@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/docs', function () {
     return view('docs');
 });
+
+
+Route::get('/reset', 'ManageController@reset');
