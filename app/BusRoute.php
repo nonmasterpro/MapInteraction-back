@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class BusRoute extends Model
 {
-    public function Place()
+    public function Places()
     {
-        return $this->hasOne('App\Place');
+        return $this->hasMany('App\Place');
+    }
+
+    public function BusStation()
+    {
+        return $this->belongsTo('App\BusStation');
     }
 }
