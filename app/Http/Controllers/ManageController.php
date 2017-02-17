@@ -13,6 +13,29 @@ use Illuminate\Http\Request;
 
 class ManageController extends Controller
 {
+    function resetByName($name) {
+        switch ($name) {
+            case 'place':
+                Place::query()->truncate();
+                break;
+            case 'image':
+                Image::query()->truncate();
+                break;
+            case 'user':
+                User::query()->truncate();
+                break;
+            case 'busstation':
+                BusStation::query()->truncate();
+                break;
+            case 'busroute':
+                BusRoute::query()->truncate();
+                break;
+            case 'schedule':
+                Schedule::query()->truncate();
+                break;
+        }
+    }
+
     function reset() {
         Place::query()->truncate();
         Image::query()->truncate();
