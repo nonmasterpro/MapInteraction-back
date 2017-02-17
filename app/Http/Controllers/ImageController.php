@@ -15,7 +15,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-      $images = Image::all();
+      $images = Image::with("place")->get();
       return response()->json($images);
     }
 
@@ -60,7 +60,7 @@ class ImageController extends Controller
      */
     public function show($id)
     {
-        $image = Image::find($id);
+        $image = Image::with("place")->where('id', $id)->first();
         return response()->json($image);
     }
 
