@@ -22,7 +22,7 @@ class CreateSchedulesTable extends Migration
             $table->integer('user_id')->foreign()
             ->references('id')->on('users')
             ->onDelete('cascade');
-            $table->integer('place_id')->foreign()
+            $table->unsignedInteger('place_id')->nullable()->foreign()
             ->references('id')->on('places')
             ->onDelete('cascade');
             $table->timestamps();
