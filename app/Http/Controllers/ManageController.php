@@ -75,7 +75,7 @@ class ManageController extends Controller
         $course3->start = '13:00:00';
         $course3->end = '14:30:00';
         $course3->user_id = $admin->id;
-        // $course3->place_id = $place->id;
+        $course3->place_id = $place->id;
         $course3->save();
 
         $course2 = new Schedule();
