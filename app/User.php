@@ -31,4 +31,8 @@ class User extends UserElegant
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function Schedules() {
+        return parent::hasMany('App\Schedule');
+    }
 }

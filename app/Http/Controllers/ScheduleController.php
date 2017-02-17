@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Subject;
+use App\Schedule;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -14,7 +14,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+        $schedules = Schedule::with("Place", "User")->get();
+        return response()->json($schedules);
     }
 
     /**
@@ -35,7 +36,18 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $schedule = new Schedule();
+        $schedule->courseName = $input->courseName;
+        $schedule->day = $input->day;
+        $schedule->start = $input->start;
+        $schedule->end = $input->end;
+        $schedule->user_id = $input->userId;
+        $schedule->place_id = $input->placeId;
+        $schedule->save();
+
+        return response()->json($schedule);
     }
 
     /**
@@ -44,9 +56,10 @@ class ScheduleController extends Controller
      * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function show(Subject $subject)
+    public function show($id)
     {
-        //
+        $schedule = Schedule::with("Place", "User")->where('id', $id)->first();
+        return response()->json($schedule);
     }
 
     /**
@@ -67,9 +80,22 @@ class ScheduleController extends Controller
      * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Subject $subject)
+    public function update(Request $request, $id)
     {
-        //
+        
+        $input = $request->all();
+        $schedule = Schedule::find($id);
+
+        $schedule = new Schedule();
+        $schedule->courseName = $input->courseName;
+        $schedule->day = $input->day;
+        $schedule->start = $input->start;
+        $schedule->end = $input->end;
+        $schedule->user_id = $input->userId;
+        $schedule->place_id = $input->placeId;
+        $schedule->save();
+
+        return response()->json($schedule);
     }
 
     /**
@@ -78,8 +104,9 @@ class ScheduleController extends Controller
      * @param  \App\Subject  $subject
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Subject $subject)
-    {
-        //
+    public function destroy($id)
+    { 
+        $schedule = Schedule::destroy($id);
+        return response()->json($schedule);
     }
 }
