@@ -26,5 +26,9 @@ class Place extends Elegant
     {
         return $this->belongsTo('App\BusRoute');
     }
+    
+    public function Schedules() {
+        return parent::hasMany('App\Schedules');
+    }
 
 }

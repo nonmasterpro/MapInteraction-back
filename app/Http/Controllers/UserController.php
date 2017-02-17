@@ -49,7 +49,7 @@ class UserController extends Controller
    */
   public function index(Request $request)
   {
-    $users = User::all();
+    $users = User::with("Schedules")->get();
     return response()->json($users);
   }
 

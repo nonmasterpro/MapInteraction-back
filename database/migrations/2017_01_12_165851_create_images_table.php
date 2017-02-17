@@ -22,7 +22,7 @@ class CreateImagesTable extends Migration
             // $table->foreign('place_id')->references('id')->on('images')->onDelete('cascade');
             // $table->dropForeign('place_id');
             $table->unsignedInteger('place_id')->nullable();
-            $table->foreign('place_id')->references('id')->on('images')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('place_id')->references('id')->on('places')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });

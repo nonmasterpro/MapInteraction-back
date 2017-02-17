@@ -37,5 +37,10 @@ Route::resource('routes', 'BusRouteController', [
     'middleware' => 'jwt.auth'
 ]);
 
+Route::resource('schedules', 'ScheduleController', [
+    'middleware' => 'jwt.auth'
+]);
+
+
 Route::post('auth', 'Api\AuthController@authenticate');
 Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
