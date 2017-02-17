@@ -21,3 +21,4 @@ Route::get('/docs', function () {
 
 
 Route::get('/reset', 'ManageController@reset');
+Route::get('/reset/{name}', 'ManageController@resetByName');
