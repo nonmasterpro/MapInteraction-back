@@ -37,7 +37,7 @@ class PlaceController extends Controller
   */
   public function index()
   {
-    $places = Place::with("images", "Routes")->get();
+    $places = Place::with("images", "BusRoutes")->get();
     return response()->json($places);
   }
 
