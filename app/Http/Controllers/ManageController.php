@@ -67,7 +67,6 @@ class ManageController extends Controller
         $place->contact = 'non@non.com';
         $place->website = 'non.com';
         $place->type = 'x';
-        // $place->bus_route_id = $route->id;
         $place->save();
 
         $route = new BusRoute();
