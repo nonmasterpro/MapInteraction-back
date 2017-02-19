@@ -43,6 +43,8 @@ class ManageController extends Controller
         BusStation::query()->truncate();
         BusRoute::query()->truncate();
         Schedule::query()->truncate();
+        DB::table('routes_places')->truncate();
+        DB::table('routes_stations')->truncate();
 
         $admin = new User();
         $admin->name = 'Teerapong Boonmark';
@@ -57,11 +59,6 @@ class ManageController extends Controller
         $station->y = 14.15;
         $station->save();
 
-        $route = new BusRoute();
-        $route->name = 'XYZ route';
-        $route->bus_station_id = $station->id;
-        $route->save();
-
         $place = new Place();
         $place->name = 'name';
         $place->description = 'description';
@@ -70,8 +67,15 @@ class ManageController extends Controller
         $place->contact = 'non@non.com';
         $place->website = 'non.com';
         $place->type = 'x';
-        $place->bus_route_id = $route->id;
+        // $place->bus_route_id = $route->id;
         $place->save();
+
+        $route = new BusRoute();
+        $route->name = 'XYZ route';
+        $route->save();
+        $route->BusStations()->attach($station->id);
+        $route->Places()->attach($place->id);
+        $route->save();
 
         $image1 = new Image();
         $image1->fileName = '1486475349.png';

@@ -44,6 +44,9 @@ class BusStationController extends Controller
         $station->y = $input->y;
         $station->save();
 
+        $station->rotues()->sync($input->routes);
+        $station->save();
+
         return response()->json($station);
     }
 
@@ -84,6 +87,9 @@ class BusStationController extends Controller
         $station->name = $input->name;
         $station->x = $input->x;
         $station->y = $input->y;
+        $station->save();
+
+        $station->rotues()->sync($input->routes);
         $station->save();
 
         return response()->json($station);

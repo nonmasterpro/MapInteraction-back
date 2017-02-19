@@ -8,11 +8,11 @@ class BusRoute extends Model
 {
     public function Places()
     {
-        return $this->hasMany('App\Place');
+        return $this->belongsToMany('App\Place', 'routes_places');
     }
 
-    public function BusStation()
+    public function BusStations()
     {
-        return $this->belongsTo('App\BusStation');
+        return $this->belongsToMany('App\BusStation', 'routes_stations');
     }
 }
