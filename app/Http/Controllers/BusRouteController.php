@@ -43,7 +43,7 @@ class BusRouteController extends Controller
         $route->name = $input->name;
         $route->save();
 
-        $route->stations()->sync($input->stations);
+        $route->BusStations()->sync($input->stations);
         $route->places()->sync($input->places);
         $route->save();
 
@@ -89,7 +89,7 @@ class BusRouteController extends Controller
         $route->name = $input->name;
         $route->save();
 
-        $route->stations()->sync($input->stations);
+        $route->BusStations()->sync($input->stations);
         $route->places()->sync($input->places);
         $route->save();
 
