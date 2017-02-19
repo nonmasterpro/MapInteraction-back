@@ -44,7 +44,7 @@ class BusStationController extends Controller
         $station->y = $input->y;
         $station->save();
 
-        $station->BusRoutes()->sync($input->routes);
+        $station->BusRoutes()->sync($request->routes);
         $station->save();
 
         $station = $station::with("BusRoutes", "Routes.Places", "Routes.Places.images")->get();
@@ -90,7 +90,7 @@ class BusStationController extends Controller
         $station->y = $input->y;
         $station->save();
 
-        $station->BusRoutes()->sync($input->routes);
+        $station->BusRoutes()->sync($request->routes);
         $station->save();
 
         $station = $station::with("BusRoutes", "Routes.Places", "Routes.Places.images")->get();
