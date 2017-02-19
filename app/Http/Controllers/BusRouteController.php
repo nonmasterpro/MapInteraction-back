@@ -43,8 +43,8 @@ class BusRouteController extends Controller
         $route->name = $input->name;
         $route->save();
 
-        $route->BusStations()->sync($input->stations);
-        $route->places()->sync($input->places);
+        $route->BusStations()->sync($request->stations);
+        $route->places()->sync($request->places);
         $route->save();
 
         $route::with("Places.images", "Places", "BusStations")->get();
@@ -89,8 +89,8 @@ class BusRouteController extends Controller
         $route->name = $input->name;
         $route->save();
 
-        $route->BusStations()->sync($input->stations);
-        $route->places()->sync($input->places);
+        $route->BusStations()->sync($request->stations);
+        $route->places()->sync($request->places);
         $route->save();
 
         $route::with("Places.images", "Places", "BusStations")->get();
