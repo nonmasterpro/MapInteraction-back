@@ -112,7 +112,7 @@ class PlaceController extends Controller
       $place->rotues()->sync($input->routes);
       $place->save();
 
-      $place::with("images", 'Routes')->get();
+      $place::with("images", 'BusRoutes')->get();
       return response()->json($place);
     } else {
       $errors = $place->errors();
@@ -150,7 +150,7 @@ class PlaceController extends Controller
   public function show($id)
   {
     // $place = Place::find($id);
-    $place = Place::with("images", "Routes")->where('id', $id)->first();
+    $place = Place::with("images", "BusRoutes")->where('id', $id)->first();
     return response()->json($place);
   }
 
@@ -229,7 +229,7 @@ class PlaceController extends Controller
       $place->rotues()->sync($input->routes);
       $place->save();
 
-      $place::with("images", 'Routes')->get();
+      $place::with("images", 'BusRoutes')->get();
       return response()->json($place);
     } else {
       $errors = $place->errors();

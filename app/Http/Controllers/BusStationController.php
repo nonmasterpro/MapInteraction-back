@@ -14,7 +14,7 @@ class BusStationController extends Controller
      */
     public function index()
     {
-        $stations = BusStation::with("Routes", "Routes.Places", "Routes.Places.images")->get();
+        $stations = BusStation::with("BusRoutes", "Routes.Places", "Routes.Places.images")->get();
         return response()->json($stations);
     }
 
@@ -58,7 +58,7 @@ class BusStationController extends Controller
      */
     public function show($id)
     {
-        $stations = BusStation::with("Routes", "Routes.Places", "Routes.Places.images")->where('id', $id)->first();
+        $stations = BusStation::with("BusRoutes", "Routes.Places", "Routes.Places.images")->where('id', $id)->first();
         return response()->json($stations);
     }
 
