@@ -8,6 +8,6 @@ class BusStation extends Model
 {
     public function Routes()
     {
-        return $this->hasMany('App\BusRoute');
+        return $this->belongsToMany('App\BusRoute', 'routes_stations');
     }
 }

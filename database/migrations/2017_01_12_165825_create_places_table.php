@@ -22,9 +22,9 @@ class CreatePlacesTable extends Migration
             $table->string('contact');
             $table->string('website');
             $table->string('type');
-            $table->unsignedInteger('bus_route_id')->nullable()->foreign()
-            ->references('id')->on('bus_routes')
-            ->onDelete('cascade');
+            // $table->unsignedInteger('bus_route_id')->nullable()->foreign()
+            // ->references('id')->on('bus_routes')
+            // ->onDelete('cascade');
             $table->timestamps();
         });
     }
