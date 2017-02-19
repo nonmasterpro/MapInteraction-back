@@ -24,7 +24,7 @@ class Place extends Elegant
 
     public function BusRoutes()
     {
-        return $this->belongsToMany('App\BusRoute', 'routes_places');
+        return $this->belongsToMany('App\Routes', 'routes_places');
     }
     
     public function Schedules() {
