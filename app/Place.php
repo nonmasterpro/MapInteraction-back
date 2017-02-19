@@ -22,7 +22,7 @@ class Place extends Elegant
         return parent::hasMany('App\Image');
     }
 
-    public function BusRoutes()
+    public function Routes()
     {
         return $this->belongsToMany('App\Routes', 'routes_places');
     }
