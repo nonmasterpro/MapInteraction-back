@@ -539,7 +539,7 @@ class ManageController extends Controller
         $place29->save();
 
         $image29 = new Image();
-        $image29->fileName = '29.jpg';
+        $image29->fileName = '30.jpg';
         $image29->place_id = $place29->id;
         $image29->save();
 
