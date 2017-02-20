@@ -417,7 +417,7 @@ class ManageController extends Controller
         $place21->save();
 
         $image21 = new Image();
-        $image21->fileName = '21.jng';
+        $image21->fileName = '21.jpg';
         $image21->place_id = $place21->id;
         $image21->save();
 
@@ -432,7 +432,7 @@ class ManageController extends Controller
         $place22->save();
 
         $image22 = new Image();
-        $image22->fileName = '22.jng';
+        $image22->fileName = '22.jpg';
         $image22->place_id = $place22->id;
         $image22->save();
 
@@ -447,7 +447,7 @@ class ManageController extends Controller
         $place23->save();
 
         $image23 = new Image();
-        $image23->fileName = '23.jng';
+        $image23->fileName = '23.jpg';
         $image23->place_id = $place23->id;
         $image23->save();
 
@@ -462,7 +462,7 @@ class ManageController extends Controller
         $place24->save();
 
         $image24 = new Image();
-        $image24->fileName = '24.jng';
+        $image24->fileName = '24.jpg';
         $image24->place_id = $place24->id;
         $image24->save();
 
@@ -477,7 +477,7 @@ class ManageController extends Controller
         $place25->save();
 
         $image25 = new Image();
-        $image25->fileName = '25.jng';
+        $image25->fileName = '25.jpg';
         $image25->place_id = $place25->id;
         $image25->save();
 
@@ -494,7 +494,7 @@ class ManageController extends Controller
         $place26->save();
 
         $image26 = new Image();
-        $image26->fileName = '26.jng';
+        $image26->fileName = '26.jpg';
         $image26->place_id = $place26->id;
         $image26->save();
 
@@ -509,7 +509,7 @@ class ManageController extends Controller
         $place27->save();
 
         $image27 = new Image();
-        $image27->fileName = '27.jng';
+        $image27->fileName = '27.jpg';
         $image27->place_id = $place27->id;
         $image27->save();
 
@@ -524,7 +524,7 @@ class ManageController extends Controller
         $place28->save();
 
         $image28 = new Image();
-        $image28->fileName = '28.jng';
+        $image28->fileName = '28.jpg';
         $image28->place_id = $place28->id;
         $image28->save();
 
@@ -539,7 +539,7 @@ class ManageController extends Controller
         $place29->save();
 
         $image29 = new Image();
-        $image29->fileName = '29.jng';
+        $image29->fileName = '29.jpg';
         $image29->place_id = $place29->id;
         $image29->save();
 
@@ -554,7 +554,7 @@ class ManageController extends Controller
         $place30->save();
 
         $place30 = new Image();
-        $place30->fileName = '30.jng';
+        $place30->fileName = '30.jpg';
         $place30->place_id = $place30->id;
         $place30->save();
 
@@ -571,7 +571,7 @@ class ManageController extends Controller
         $place31->save();
 
         $place31 = new Image();
-        $place31->fileName = '31.jng';
+        $place31->fileName = '31.jpg';
         $place31->place_id = $place31->id;
         $place31->save();
 
@@ -586,7 +586,7 @@ class ManageController extends Controller
         $place32->save();
 
         $place32 = new Image();
-        $place32->fileName = '32.jng';
+        $place32->fileName = '32.jpg';
         $place32->place_id = $place32->id;
         $place32->save();
 
@@ -601,7 +601,7 @@ class ManageController extends Controller
         $place33->save();
 
         $place33 = new Image();
-        $place33->fileName = '33.jng';
+        $place33->fileName = '33.jpg';
         $place33->place_id = $place33->id;
         $place33->save();
 
@@ -616,7 +616,7 @@ class ManageController extends Controller
         $place34->save();
 
         $place34 = new Image();
-        $place34->fileName = '34.jng';
+        $place34->fileName = '34.jpg';
         $place34->place_id = $place34->id;
         $place34->save();
 
@@ -633,7 +633,7 @@ class ManageController extends Controller
         $place35->save();
 
         $place35 = new Image();
-        $place35->fileName = '35.jng';
+        $place35->fileName = '35.jpg';
         $place35->place_id = $place35->id;
         $place35->save();
 
@@ -651,7 +651,7 @@ class ManageController extends Controller
         $place36->save();
 
         $place36 = new Image();
-        $place36->fileName = '36.jng';
+        $place36->fileName = '36.jpg';
         $place36->place_id = $place36->id;
         $place36->save();
 
@@ -666,7 +666,7 @@ class ManageController extends Controller
         $place37->save();
 
         $place37 = new Image();
-        $place37->fileName = '37.jng';
+        $place37->fileName = '37.jpg';
         $place37->place_id = $place37->id;
         $place37->save();
 
@@ -681,7 +681,7 @@ class ManageController extends Controller
         $place38->save();
 
         $place38 = new Image();
-        $place38->fileName = '38.jng';
+        $place38->fileName = '38.jpg';
         $place38->place_id = $place38->id;
         $place38->save();
 
@@ -696,7 +696,7 @@ class ManageController extends Controller
         $place39->save();
 
         $place39 = new Image();
-        $place39->fileName = '39.jng';
+        $place39->fileName = '39.jpg';
         $place39->place_id = $place39->id;
         $place39->save();
 
@@ -711,7 +711,7 @@ class ManageController extends Controller
         $place40->save();
 
         $place40 = new Image();
-        $place40->fileName = '40.jng';
+        $place40->fileName = '40.jpg';
         $place40->place_id = $place40->id;
         $place40->save();
 
@@ -730,7 +730,7 @@ class ManageController extends Controller
         $place41->save();
 
         $place41 = new Image();
-        $place41->fileName = '41.jng';
+        $place41->fileName = '41.jpg';
         $place41->place_id = $place41->id;
         $place41->save();
 
@@ -746,7 +746,7 @@ class ManageController extends Controller
         $place42->save();
 
         $place42 = new Image();
-        $place42->fileName = '42.jng';
+        $place42->fileName = '42.jpg';
         $place42->place_id = $place42->id;
         $place42->save();
 
@@ -761,7 +761,7 @@ class ManageController extends Controller
         $place43->save();
 
         $place43 = new Image();
-        $place43->fileName = '43.jng';
+        $place43->fileName = '43.jpg';
         $place43->place_id = $place43->id;
         $place43->save();
 
@@ -778,7 +778,7 @@ class ManageController extends Controller
         $place44->save();
 
         $place44 = new Image();
-        $place44->fileName = '44.jng';
+        $place44->fileName = '44.jpg';
         $place44->place_id = $place44->id;
         $place44->save();
     }
