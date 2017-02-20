@@ -404,6 +404,382 @@ class ManageController extends Controller
         $image20->place_id = $place20->id;
         $image20->save();
 
-        //////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////Landmark/////////////////////////////////////////////
+
+        $place21 = new Place();
+        $place21->name = 'Salatham';
+        $place21->description = 'Salatham';
+        $place21->x = 18.804874;
+        $place21->y = 98.952703;
+        $place21->contact = 'non@non.com';
+        $place21->website = 'non.com';
+        $place21->type = 'landmark';
+        $place21->save();
+
+        $image21 = new Image();
+        $image21->fileName = '21.jng';
+        $image21->place_id = $place21->id;
+        $image21->save();
+
+        $place22 = new Place();
+        $place22->name = 'Clock Tower';
+        $place22->description = 'Clock Tower';
+        $place22->x = 18.796506;
+        $place22->y = 98.953276;
+        $place22->contact = 'non@non.com';
+        $place22->website = 'non.com';
+        $place22->type = 'landmark';
+        $place22->save();
+
+        $image22 = new Image();
+        $image22->fileName = '22.jng';
+        $image22->place_id = $place22->id;
+        $image22->save();
+
+        $place23 = new Place();
+        $place23->name = 'Angkaew';
+        $place23->description = 'Angkaew';
+        $place23->x = 18.806276;
+        $place23->y = 98.950202;
+        $place23->contact = 'non@non.com';
+        $place23->website = 'non.com';
+        $place23->type = 'landmark';
+        $place23->save();
+
+        $image23 = new Image();
+        $image23->fileName = '23.jng';
+        $image23->place_id = $place23->id;
+        $image23->save();
+
+        $place24 = new Place();
+        $place24->name = 'Elephant spirit house';
+        $place24->description = 'Elephant spirit house';
+        $place24->x = 18.805608;
+        $place24->y = 98.953184;
+        $place24->contact = 'non@non.com';
+        $place24->website = 'non.com';
+        $place24->type = 'landmark';
+        $place24->save();
+
+        $image24 = new Image();
+        $image24->fileName = '24.jng';
+        $image24->place_id = $place24->id;
+        $image24->save();
+
+        $place25 = new Place();
+        $place25->name = 'Palm Garden';
+        $place25->description = 'Palm Garden';
+        $place25->x = 18.800839;
+        $place25->y = 98.954428;
+        $place25->contact = 'non@non.com';
+        $place25->website = 'non.com';
+        $place25->type = 'landmark';
+        $place25->save();
+
+        $image25 = new Image();
+        $image25->fileName = '25.jng';
+        $image25->place_id = $place25->id;
+        $image25->save();
+
+        //////////////////////////Dorm///////////////////////////
+
+        $place26 = new Place();
+        $place26->name = '4TH Female Dormitory';
+        $place26->description = '4TH Female Dormitory';
+        $place26->x = 18.798333;
+        $place26->y = 98.953764;
+        $place26->contact = 'non@non.com';
+        $place26->website = 'non.com';
+        $place26->type = 'dormitory';
+        $place26->save();
+
+        $image26 = new Image();
+        $image26->fileName = '26.jng';
+        $image26->place_id = $place26->id;
+        $image26->save();
+
+        $place27 = new Place();
+        $place27->name = '6TH Female Dormitory';
+        $place27->description = '6TH Female Dormitory';
+        $place27->x = 18.797495;
+        $place27->y = 98.953810;
+        $place27->contact = 'non@non.com';
+        $place27->website = 'non.com';
+        $place27->type = 'dormitory';
+        $place27->save();
+
+        $image27 = new Image();
+        $image27->fileName = '27.jng';
+        $image27->place_id = $place27->id;
+        $image27->save();
+
+        $place28 = new Place();
+        $place28->name = '5TH Female Dormitory';
+        $place28->description = '5TH Female Dormitory';
+        $place28->x = 18.797952;
+        $place28->y = 98.954711;
+        $place28->contact = 'non@non.com';
+        $place28->website = 'non.com';
+        $place28->type = 'dormitory';
+        $place28->save();
+
+        $image28 = new Image();
+        $image28->fileName = '28.jng';
+        $image28->place_id = $place28->id;
+        $image28->save();
+
+        $place29 = new Place();
+        $place29->name = '40TH Years Dormitory';
+        $place29->description = '40TH Years Dormitory';
+        $place29->x = 18.799048;
+        $place29->y = 98.958784;
+        $place29->contact = 'non@non.com';
+        $place29->website = 'non.com';
+        $place29->type = 'dormitory';
+        $place29->save();
+
+        $image29 = new Image();
+        $image29->fileName = '29.jng';
+        $image29->place_id = $place29->id;
+        $image29->save();
+
+        $place30 = new Place();
+        $place30->name = 'Pink Dormitory';
+        $place30->description = 'Pink Dormitory';
+        $place30->x = 18.799205;
+        $place30->y = 98.957820;
+        $place30->contact = 'non@non.com';
+        $place30->website = 'non.com';
+        $place30->type = 'dormitory';
+        $place30->save();
+
+        $place30 = new Image();
+        $place30->fileName = '30.jng';
+        $place30->place_id = $place30->id;
+        $place30->save();
+
+        ////////////////////////////////Restaurant///////////////////////
+
+        $place31 = new Place();
+        $place31->name = 'Rohmsak Market';
+        $place31->description = 'Rohmsak Market';
+        $place31->x = 18.799292;
+        $place31->y = 98.948710;
+        $place31->contact = 'non@non.com';
+        $place31->website = 'non.com';
+        $place31->type = 'restaurant';
+        $place31->save();
+
+        $place31 = new Image();
+        $place31->fileName = '31.jng';
+        $place31->place_id = $place31->id;
+        $place31->save();
+
+        $place32 = new Place();
+        $place32->name = 'Humanities Canteen';
+        $place32->description = 'Humanities Canteen';
+        $place32->x = 18.804318;
+        $place32->y = 98.949392;
+        $place32->contact = 'non@non.com';
+        $place32->website = 'non.com';
+        $place32->type = 'restaurant';
+        $place32->save();
+
+        $place32 = new Image();
+        $place32->fileName = '32.jng';
+        $place32->place_id = $place32->id;
+        $place32->save();
+
+        $place33 = new Place();
+        $place33->name = 'Engineering Canteen';
+        $place33->description = 'Engineering Canteen';
+        $place33->x = 18.795330;
+        $place33->y = 98.951063;
+        $place33->contact = 'non@non.com';
+        $place33->website = 'non.com';
+        $place33->type = 'restaurant';
+        $place33->save();
+
+        $place33 = new Image();
+        $place33->fileName = '33.jng';
+        $place33->place_id = $place33->id;
+        $place33->save();
+
+        $place34 = new Place();
+        $place34->name = 'Aor Mor Chor Canteen';
+        $place34->description = 'Aor Mor Chor Canteen';
+        $place34->x = 18.800538;
+        $place34->y = 98.952881;
+        $place34->contact = 'non@non.com';
+        $place34->website = 'non.com';
+        $place34->type = 'restaurant';
+        $place34->save();
+
+        $place34 = new Image();
+        $place34->fileName = '34.jng';
+        $place34->place_id = $place34->id;
+        $place34->save();
+
+        //////////////////////////////////ATM////////////////////////
+
+        $place35 = new Place();
+        $place35->name = 'KrungThai Bank ATM';
+        $place35->description = 'KrungThai Bank ATM';
+        $place35->x = 18.800474;
+        $place35->y = 98.953237;
+        $place35->contact = 'non@non.com';
+        $place35->website = 'non.com';
+        $place35->type = 'ATM';
+        $place35->save();
+
+        $place35 = new Image();
+        $place35->fileName = '35.jng';
+        $place35->place_id = $place35->id;
+        $place35->save();
+
+        ////////////////////////////////Sport Field////////////////////
+
+
+        $place36 = new Place();
+        $place36->name = 'Central Gym CMU';
+        $place36->description = 'Central Gym CMU';
+        $place36->x = 18.797270;
+        $place36->y = 98.957622;
+        $place36->contact = 'non@non.com';
+        $place36->website = 'non.com';
+        $place36->type = 'sportField';
+        $place36->save();
+
+        $place36 = new Image();
+        $place36->fileName = '36.jng';
+        $place36->place_id = $place36->id;
+        $place36->save();
+
+        $place37 = new Place();
+        $place37->name = 'Central Sport Field';
+        $place37->description = 'Central Sport Field';
+        $place37->x = 18.797102;
+        $place37->y = 98.956621;
+        $place37->contact = 'non@non.com';
+        $place37->website = 'non.com';
+        $place37->type = 'sportField';
+        $place37->save();
+
+        $place37 = new Image();
+        $place37->fileName = '37.jng';
+        $place37->place_id = $place37->id;
+        $place37->save();
+
+        $place38 = new Place();
+        $place38->name = 'Rujirawong Swimming Pool';
+        $place38->description = 'Rujirawong Swimming Pool';
+        $place38->x = 18.796675;
+        $place38->y = 98.955104;
+        $place38->contact = 'non@non.com';
+        $place38->website = 'non.com';
+        $place38->type = 'sportField';
+        $place38->save();
+
+        $place38 = new Image();
+        $place38->fileName = '38.jng';
+        $place38->place_id = $place38->id;
+        $place38->save();
+
+        $place39 = new Place();
+        $place39->name = 'Shooting Ground';
+        $place39->description = 'Shooting Ground';
+        $place39->x = 18.797657;
+        $place39->y = 98.957655;
+        $place39->contact = 'non@non.com';
+        $place39->website = 'non.com';
+        $place39->type = 'sportField';
+        $place39->save();
+
+        $place39 = new Image();
+        $place39->fileName = '39.jng';
+        $place39->place_id = $place39->id;
+        $place39->save();
+
+        $place40 = new Place();
+        $place40->name = 'Tennis Court';
+        $place40->description = 'Tennis Court';
+        $place40->x = 18.799191;
+        $place40->y = 98.956811;
+        $place40->contact = 'non@non.com';
+        $place40->website = 'non.com';
+        $place40->type = 'sportField';
+        $place40->save();
+
+        $place40 = new Image();
+        $place40->fileName = '40.jng';
+        $place40->place_id = $place40->id;
+        $place40->save();
+
+
+        /////////////////////////////////Cafe//////////////////////
+
+
+        $place41 = new Place();
+        $place41->name = 'Pleฟrn Coffee';
+        $place41->description = 'Pleฟrn Coffee';
+        $place41->x = 18.795598;
+        $place41->y = 98.953073;
+        $place41->contact = 'non@non.com';
+        $place41->website = 'non.com';
+        $place41->type = 'cafe';
+        $place41->save();
+
+        $place41 = new Image();
+        $place41->fileName = '41.jng';
+        $place41->place_id = $place41->id;
+        $place41->save();
+
+
+        $place42 = new Place();
+        $place42->name = 'Social Fresh Coffee';
+        $place42->description = 'Social Fresh Coffee';
+        $place42->x = 18.802713;
+        $place42->y = 98.949657;
+        $place42->contact = 'non@non.com';
+        $place42->website = 'non.com';
+        $place42->type = 'cafe';
+        $place42->save();
+
+        $place42 = new Image();
+        $place42->fileName = '42.jng';
+        $place42->place_id = $place42->id;
+        $place42->save();
+
+        $place43 = new Place();
+        $place43->name = 'Nome Kased';
+        $place43->description = 'Nome Kased';
+        $place43->x = 18.792902;
+        $place43->y = 98.958927;
+        $place43->contact = 'non@non.com';
+        $place43->website = 'non.com';
+        $place43->type = 'cafe';
+        $place43->save();
+
+        $place43 = new Image();
+        $place43->fileName = '43.jng';
+        $place43->place_id = $place43->id;
+        $place43->save();
+
+        ////////////////////////////////CarParking///////////////////
+
+        $place44 = new Place();
+        $place44->name = 'Sport Field Car Parking';
+        $place44->description = 'Sport Field Car Parking';
+        $place44->x = 18.797238;
+        $place44->y = 98.957169;
+        $place44->contact = 'non@non.com';
+        $place44->website = 'non.com';
+        $place44->type = 'carParking';
+        $place44->save();
+
+        $place44 = new Image();
+        $place44->fileName = '44.jng';
+        $place44->place_id = $place44->id;
+        $place44->save();
     }
 }
