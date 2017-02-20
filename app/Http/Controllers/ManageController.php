@@ -553,10 +553,10 @@ class ManageController extends Controller
         $place30->type = 'dormitory';
         $place30->save();
 
-        $place30 = new Image();
-        $place30->fileName = '30.jpg';
-        $place30->place_id = $place30->id;
-        $place30->save();
+        $image30 = new Image();
+        $image30->fileName = '30.jpg';
+        $image30->place_id = $place30->id;
+        $image30->save();
 
         ////////////////////////////////Restaurant///////////////////////
 
@@ -570,10 +570,10 @@ class ManageController extends Controller
         $place31->type = 'restaurant';
         $place31->save();
 
-        $place31 = new Image();
-        $place31->fileName = '31.jpg';
-        $place31->place_id = $place31->id;
-        $place31->save();
+        $image31 = new Image();
+        $image31->fileName = '31.jpg';
+        $image31->place_id = $place31->id;
+        $image31->save();
 
         $place32 = new Place();
         $place32->name = 'Humanities Canteen';
@@ -585,10 +585,10 @@ class ManageController extends Controller
         $place32->type = 'restaurant';
         $place32->save();
 
-        $place32 = new Image();
-        $place32->fileName = '32.jpg';
-        $place32->place_id = $place32->id;
-        $place32->save();
+        $image32 = new Image();
+        $image32->fileName = '32.jpg';
+        $image32->place_id = $place32->id;
+        $image32->save();
 
         $place33 = new Place();
         $place33->name = 'Engineering Canteen';
@@ -600,10 +600,10 @@ class ManageController extends Controller
         $place33->type = 'restaurant';
         $place33->save();
 
-        $place33 = new Image();
-        $place33->fileName = '33.jpg';
-        $place33->place_id = $place33->id;
-        $place33->save();
+        $image33 = new Image();
+        $image33->fileName = '33.jpg';
+        $image33->place_id = $place33->id;
+        $image33->save();
 
         $place34 = new Place();
         $place34->name = 'Aor Mor Chor Canteen';
@@ -615,10 +615,10 @@ class ManageController extends Controller
         $place34->type = 'restaurant';
         $place34->save();
 
-        $place34 = new Image();
-        $place34->fileName = '34.jpg';
-        $place34->place_id = $place34->id;
-        $place34->save();
+        $image34 = new Image();
+        $image34->fileName = '34.jpg';
+        $image34->place_id = $place34->id;
+        $image34->save();
 
         //////////////////////////////////ATM////////////////////////
 
@@ -632,10 +632,10 @@ class ManageController extends Controller
         $place35->type = 'ATM';
         $place35->save();
 
-        $place35 = new Image();
-        $place35->fileName = '35.jpg';
-        $place35->place_id = $place35->id;
-        $place35->save();
+        $image35 = new Image();
+        $image35->fileName = '35.jpg';
+        $image35->place_id = $place35->id;
+        $image35->save();
 
         ////////////////////////////////Sport Field////////////////////
 
@@ -650,10 +650,10 @@ class ManageController extends Controller
         $place36->type = 'sportField';
         $place36->save();
 
-        $place36 = new Image();
-        $place36->fileName = '36.jpg';
-        $place36->place_id = $place36->id;
-        $place36->save();
+        $image36 = new Image();
+        $image36->fileName = '36.jpg';
+        $image36->place_id = $place36->id;
+        $image36->save();
 
         $place37 = new Place();
         $place37->name = 'Central Sport Field';
@@ -665,10 +665,10 @@ class ManageController extends Controller
         $place37->type = 'sportField';
         $place37->save();
 
-        $place37 = new Image();
-        $place37->fileName = '37.jpg';
-        $place37->place_id = $place37->id;
-        $place37->save();
+        $image37 = new Image();
+        $image37->fileName = '37.jpg';
+        $image37->place_id = $place37->id;
+        $image37->save();
 
         $place38 = new Place();
         $place38->name = 'Rujirawong Swimming Pool';
@@ -680,10 +680,10 @@ class ManageController extends Controller
         $place38->type = 'sportField';
         $place38->save();
 
-        $place38 = new Image();
-        $place38->fileName = '38.jpg';
-        $place38->place_id = $place38->id;
-        $place38->save();
+        $image38 = new Image();
+        $image38->fileName = '38.jpg';
+        $image38->place_id = $place38->id;
+        $image38->save();
 
         $place39 = new Place();
         $place39->name = 'Shooting Ground';
@@ -695,10 +695,10 @@ class ManageController extends Controller
         $place39->type = 'sportField';
         $place39->save();
 
-        $place39 = new Image();
-        $place39->fileName = '39.jpg';
-        $place39->place_id = $place39->id;
-        $place39->save();
+        $image39 = new Image();
+        $image39->fileName = '39.jpg';
+        $image39->place_id = $place39->id;
+        $image39->save();
 
         $place40 = new Place();
         $place40->name = 'Tennis Court';
@@ -710,17 +710,17 @@ class ManageController extends Controller
         $place40->type = 'sportField';
         $place40->save();
 
-        $place40 = new Image();
-        $place40->fileName = '40.jpg';
-        $place40->place_id = $place40->id;
-        $place40->save();
+        $image40 = new Image();
+        $image40->fileName = '40.jpg';
+        $image40->place_id = $place40->id;
+        $image40->save();
 
 
         /////////////////////////////////Cafe//////////////////////
 
 
         $place41 = new Place();
-        $place41->name = 'Pleฟrn Coffee';
+        $place41->name = 'Plearn Coffee';
         $place41->description = 'Pleฟrn Coffee';
         $place41->x = 18.795598;
         $place41->y = 98.953073;
@@ -729,10 +729,10 @@ class ManageController extends Controller
         $place41->type = 'cafe';
         $place41->save();
 
-        $place41 = new Image();
-        $place41->fileName = '41.jpg';
-        $place41->place_id = $place41->id;
-        $place41->save();
+        $image41 = new Image();
+        $image41->fileName = '41.jpg';
+        $image41->place_id = $place41->id;
+        $image41->save();
 
 
         $place42 = new Place();
@@ -745,10 +745,10 @@ class ManageController extends Controller
         $place42->type = 'cafe';
         $place42->save();
 
-        $place42 = new Image();
-        $place42->fileName = '42.jpg';
-        $place42->place_id = $place42->id;
-        $place42->save();
+        $image42 = new Image();
+        $image42->fileName = '42.jpg';
+        $image42->place_id = $place42->id;
+        $image42->save();
 
         $place43 = new Place();
         $place43->name = 'Nome Kased';
@@ -760,10 +760,10 @@ class ManageController extends Controller
         $place43->type = 'cafe';
         $place43->save();
 
-        $place43 = new Image();
-        $place43->fileName = '43.jpg';
-        $place43->place_id = $place43->id;
-        $place43->save();
+        $image43 = new Image();
+        $image43->fileName = '43.jpg';
+        $image43->place_id = $place43->id;
+        $image43->save();
 
         ////////////////////////////////CarParking///////////////////
 
@@ -777,9 +777,9 @@ class ManageController extends Controller
         $place44->type = 'carParking';
         $place44->save();
 
-        $place44 = new Image();
-        $place44->fileName = '44.jpg';
-        $place44->place_id = $place44->id;
-        $place44->save();
+        $image44 = new Image();
+        $image44->fileName = '44.jpg';
+        $image44->place_id = $place44->id;
+        $image44->save();
     }
 }
