@@ -77,7 +77,7 @@ class ManageController extends Controller
         $route->save();
 
         $image = new Image();
-        $image->fileName = '1.jpeg';
+        $image->fileName = '1.jpg';
         $image->place_id = $place->id;
         $image->save();
 
@@ -130,7 +130,7 @@ class ManageController extends Controller
         $place2->save();
 
         $image2 = new Image();
-        $image2->fileName = '2.jng';
+        $image2->fileName = '2.png';
         $image2->place_id = $place2->id;
         $image2->save();
 
@@ -145,7 +145,7 @@ class ManageController extends Controller
         $place3->save();
 
         $image3 = new Image();
-        $image3->fileName = '3.jng';
+        $image3->fileName = '3.png';
         $image3->place_id = $place3->id;
         $image3->save();
 
