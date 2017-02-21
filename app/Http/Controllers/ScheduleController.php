@@ -39,12 +39,12 @@ class ScheduleController extends Controller
         $input = $request->all();
 
         $schedule = new Schedule();
-        $schedule->courseName = $input->courseName;
-        $schedule->day = $input->day;
-        $schedule->start = $input->start;
-        $schedule->end = $input->end;
-        $schedule->user_id = $input->userId;
-        $schedule->place_id = $input->placeId;
+        $schedule->courseName = $request->courseName;
+        $schedule->day = $request->day;
+        $schedule->start = $request->start;
+        $schedule->end = $request->end;
+        $schedule->user_id = $request->userId;
+        $schedule->place_id = $request->placeId;
         $schedule->save();
 
         return response()->json($schedule);
@@ -87,12 +87,12 @@ class ScheduleController extends Controller
         $schedule = Schedule::find($id);
 
         $schedule = new Schedule();
-        $schedule->courseName = $input->courseName;
-        $schedule->day = $input->day;
-        $schedule->start = $input->start;
-        $schedule->end = $input->end;
-        $schedule->user_id = $input->userId;
-        $schedule->place_id = $input->placeId;
+        $schedule->courseName = $request->courseName;
+        $schedule->day = $request->day;
+        $schedule->start = $request->start;
+        $schedule->end = $request->end;
+        $schedule->user_id = $request->userId;
+        $schedule->place_id = $request->placeId;
         $schedule->save();
 
         return response()->json($schedule);

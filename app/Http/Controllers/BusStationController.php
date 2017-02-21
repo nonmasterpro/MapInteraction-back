@@ -39,9 +39,9 @@ class BusStationController extends Controller
         $input = $request->all();
 
         $station = new BusStation();
-        $station->name = $input->name;
-        $station->x = $input->x;
-        $station->y = $input->y;
+        $station->name = $request->name;
+        $station->x = $request->x;
+        $station->y = $request->y;
         $station->save();
 
         $station->BusRoutes()->sync($request->routes);
@@ -85,9 +85,9 @@ class BusStationController extends Controller
         $input = $request->all();
         $station = BusStation::find($id);
 
-        $station->name = $input->name;
-        $station->x = $input->x;
-        $station->y = $input->y;
+        $station->name = $request->name;
+        $station->x = $request->x;
+        $station->y = $request->y;
         $station->save();
 
         $station->BusRoutes()->sync($request->routes);
