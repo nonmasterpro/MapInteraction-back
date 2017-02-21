@@ -40,7 +40,7 @@ class BusRouteController extends Controller
         $input = $request->all();
 
         $route = new BusRoute();
-        $route->name = $input->name;
+        $route->name = $request->name;
         $route->save();
 
         $route->BusStations()->sync($request->stations);
@@ -86,7 +86,7 @@ class BusRouteController extends Controller
         $input = $request->all();
         $route = BusRoute::find($id);
 
-        $route->name = $input->name;
+        $route->name = $request->name;
         $route->save();
 
         $route->BusStations()->sync($request->stations);
