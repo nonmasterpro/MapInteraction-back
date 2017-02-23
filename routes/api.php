@@ -43,6 +43,7 @@ Route::resource('schedules', 'ScheduleController', [
 
 
 Route::get('schedules/user/{id}', 'ScheduleController@getScheduleByUser');
+Route::get('stations/routes/{ids}', 'BusStationController@byRoutes');
 
 Route::post('auth', 'Api\AuthController@authenticate');
 Route::get('auth/me', 'Api\AuthController@getAuthenticatedUser');
