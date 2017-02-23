@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BusStation;
+use App\BusRoute;
 use Illuminate\Http\Request;
 
 class BusStationController extends Controller
@@ -14,7 +15,19 @@ class BusStationController extends Controller
      */
     public function index()
     {
-        $stations = BusStation::with("BusRoutes", "Routes.Places", "Routes.Places.images")->get();
+        $stations = BusStation::with("BusRoutes", "BusRoutes.Places", "BusRoutes.Places.images")->get();
+        return response()->json($stations);
+    }
+
+    public function byRoutes($ids) {
+        $ids = explode(",", $ids);
+        $stations = array();
+        foreach($ids as $id) {
+            $route = BusRoute::with("Places.images", "Places", "BusStations")->where('id', $id)->first();
+            if(!is_null($route['BusStations'])) {
+                $stations[] = $route['BusStations'];
+            }
+        }
         return response()->json($stations);
     }
 
@@ -47,7 +60,7 @@ class BusStationController extends Controller
         $station->BusRoutes()->sync($request->routes);
         $station->save();
 
-        $station = $station::with("BusRoutes", "Routes.Places", "Routes.Places.images")->get();
+        $station = $station::with("BusRoutes", "BusRoutes.Places", "BusRoutes.Places.images")->get();
         return response()->json($station);
     }
 
@@ -59,7 +72,7 @@ class BusStationController extends Controller
      */
     public function show($id)
     {
-        $stations = BusStation::with("BusRoutes", "Routes.Places", "Routes.Places.images")->where('id', $id)->first();
+        $stations = BusStation::with("BusRoutes", "BusRoutes.Places", "BusRoutes.Places.images")->where('id', $id)->first();
         return response()->json($stations);
     }
 
@@ -93,7 +106,7 @@ class BusStationController extends Controller
         $station->BusRoutes()->sync($request->routes);
         $station->save();
 
-        $station = $station::with("BusRoutes", "Routes.Places", "Routes.Places.images")->get();
+        $station = $station::with("BusRoutes", "BusRoutes.Places", "BusRoutes.Places.images")->get();
         return response()->json($station);
     }
 
