@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Schedule;
+use App\User;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -60,6 +61,12 @@ class ScheduleController extends Controller
     {
         $schedule = Schedule::with("Place", "User")->where('id', $id)->first();
         return response()->json($schedule);
+    }
+
+    public function getScheduleByUser($id)
+    {
+        $user = User::with("Schedules")->where('id', $id)->first();
+        return response()->json($user->schedules);
     }
 
     /**
