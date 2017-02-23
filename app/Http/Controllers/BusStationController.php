@@ -25,7 +25,7 @@ class BusStationController extends Controller
         foreach($ids as $id) {
             $route = BusRoute::with("Places.images", "Places", "BusStations")->where('id', $id)->first();
             if(!is_null($route['BusStations'])) {
-                $stations[] = $route['BusStations'];
+                $stations += $route['BusStations']->toArray();
             }
         }
         return response()->json($stations);
