@@ -1306,7 +1306,7 @@ class ManageController extends Controller
         $routePurple->BusStations()->attach($stationP8->id);
         $routePurple->BusStations()->attach($stationP9->id);
         $routePurple->BusStations()->attach($stationP10->id);
-        $routePurple->Places()->attach($place1->id);
+        $routePurple->Places()->attach($place->id);
         $routePurple->Places()->attach($place4->id);
         $routePurple->Places()->attach($place9->id);
         $routePurple->Places()->attach($place12->id);
