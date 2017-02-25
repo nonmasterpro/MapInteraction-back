@@ -225,8 +225,8 @@ class PlaceController extends Controller
         }
       }
 
-
-      $place->BusRoutes()->sync($input->routes);
+      $place->BusRoutes()->delete();
+      $place->BusRoutes()->sync($request->routes);
       $place->save();
 
       $place::with("images", 'BusRoutes')->get();
