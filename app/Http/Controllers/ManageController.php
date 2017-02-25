@@ -53,11 +53,6 @@ class ManageController extends Controller
         $admin->roleName = 'admin';
         $admin->save();
 
-        $station = new BusStation();
-        $station->name = 'XYZ station';
-        $station->x = 13.13;
-        $station->y = 14.15;
-        $station->save();
 
         $place = new Place();
         $place->name = 'Faculty of Agriculture';
@@ -69,23 +64,16 @@ class ManageController extends Controller
         $place->type = 'building';
         $place->save();
 
-        $route = new BusRoute();
-        $route->name = 'XYZ route';
-        $route->save();
-        $route->BusStations()->attach($station->id);
-        $route->Places()->attach($place->id);
-        $route->save();
-
         $image = new Image();
         $image->fileName = '1.jpg';
         $image->place_id = $place->id;
         $image->save();
 
         $course1 = new Schedule();
-        $course1->courseName = 'COMP PRO';
+        $course1->courseName = 'Network';
         $course1->day = 2;
-        $course1->start = '08:00:00';
-        $course1->end = '9:30:00';
+        $course1->start = '08:00';
+        $course1->end = '09:30';
         $course1->user_id = $admin->id;
         $course1->place_id = $place->id;
         $course1->save();
@@ -93,26 +81,26 @@ class ManageController extends Controller
         $course3 = new Schedule();
         $course3->courseName = 'OOP';
         $course3->day = 2;
-        $course3->start = '13:00:00';
-        $course3->end = '14:30:00';
+        $course3->start = '12:00';
+        $course3->end = '14:30';
         $course3->user_id = $admin->id;
         $course3->place_id = $place->id;
         $course3->save();
 
         $course2 = new Schedule();
-        $course2->courseName = 'COMP PRO';
+        $course2->courseName = 'COMP-PRO';
         $course2->day = 4;
-        $course2->start = '08:00:00';
-        $course2->end = '9:30:00';
+        $course2->start = '09:00';
+        $course2->end = '11:30';
         $course2->user_id = $admin->id;
         $course2->place_id = $place->id;
         $course2->save();
 
         $course4 = new Schedule();
-        $course4->courseName = 'OOP';
+        $course4->courseName = 'OOAD';
         $course4->day = 4;
-        $course4->start = '13:00:00';
-        $course4->end = '14:30:00';
+        $course4->start = '13:00';
+        $course4->end = '15:30';
         $course4->user_id = $admin->id;
         $course4->place_id = $place->id;
         $course4->save();
@@ -623,8 +611,8 @@ class ManageController extends Controller
         //////////////////////////////////ATM////////////////////////
 
         $place35 = new Place();
-        $place35->name = 'KrungThai Bank ATM';
-        $place35->description = 'KrungThai Bank ATM';
+        $place35->name = 'ATM';
+        $place35->description = 'ATM';
         $place35->x = 18.800474;
         $place35->y = 98.953237;
         $place35->contact = 'non@non.com';
@@ -781,5 +769,581 @@ class ManageController extends Controller
         $image44->fileName = '44.jpg';
         $image44->place_id = $place44->id;
         $image44->save();
+
+        ////////////////////////////////DormMale////////////////////////////
+
+        $place45 = new Place();
+        $place45->name = '7TH Male Dormitory';
+        $place45->description = '7TH Male Dormitory';
+        $place45->x = 18.799488;
+        $place45->y = 98.950083;
+        $place45->contact = 'non@non.com';
+        $place45->website = 'non.com';
+        $place45->type = 'dormitory';
+        $place45->save();
+
+        $image45 = new Image();
+        $image45->fileName = '45-49.jpg';
+        $image45->place_id = $place45->id;
+        $image45->save();
+
+        $place46 = new Place();
+        $place46->name = '6TH Male Dormitory';
+        $place46->description = '6TH Male Dormitory';
+        $place46->x = 18.797906;
+        $place46->y = 98.951889;
+        $place46->contact = 'non@non.com';
+        $place46->website = 'non.com';
+        $place46->type = 'dormitory';
+        $place46->save();
+
+        $image46 = new Image();
+        $image46->fileName = '45-49.jpg';
+        $image46->place_id = $place46->id;
+        $image46->save();
+
+        $place47 = new Place();
+        $place47->name = '5TH Male Dormitory';
+        $place47->description = '5TH Male Dormitory';
+        $place47->x = 18.797129;
+        $place47->y = 98.951783;
+        $place47->contact = 'non@non.com';
+        $place47->website = 'non.com';
+        $place47->type = 'dormitory';
+        $place47->save();
+
+        $image47 = new Image();
+        $image47->fileName = '45-49.jpg';
+        $image47->place_id = $place47->id;
+        $image47->save();
+
+        $place48 = new Place();
+        $place48->name = '4TH Male Dormitory';
+        $place48->description = '4TH Male Dormitory';
+        $place48->x = 18.797389;
+        $place48->y = 98.952953;
+        $place48->contact = 'non@non.com';
+        $place48->website = 'non.com';
+        $place48->type = 'dormitory';
+        $place48->save();
+
+        $image48 = new Image();
+        $image48->fileName = '45-49.jpg';
+        $image48->place_id = $place48->id;
+        $image48->save();
+
+        $place49 = new Place();
+        $place49->name = '3TH Male Dormitory';
+        $place49->description = '3TH Male Dormitory';
+        $place49->x = 18.798450;
+        $place49->y = 98.952754;
+        $place49->contact = 'non@non.com';
+        $place49->website = 'non.com';
+        $place49->type = 'dormitory';
+        $place49->save();
+
+        $image49 = new Image();
+        $image49->fileName = '45-49.jpg';
+        $image49->place_id = $place49->id;
+        $image49->save();
+
+        ////////////////////////////////route///////////////////////////////
+        $routeGreen = new BusRoute();
+        $routeGreen->name = 'Green Route';
+        $routeGreen->save();
+        $routeGreen->BusStations()->attach($stationG1->id);
+        $routeGreen->BusStations()->attach($stationG2->id);
+        $routeGreen->BusStations()->attach($stationG3->id);
+        $routeGreen->BusStations()->attach($stationG4->id);
+        $routeGreen->BusStations()->attach($stationG5->id);
+        $routeGreen->BusStations()->attach($stationG6->id);
+        $routeGreen->BusStations()->attach($stationG7->id);
+        $routeGreen->BusStations()->attach($stationG8->id);
+        $routeGreen->BusStations()->attach($stationG9->id);
+        $routeGreen->BusStations()->attach($stationG10->id);
+        $routeGreen->BusStations()->attach($stationG11->id);
+        $routeGreen->BusStations()->attach($stationG12->id);
+        $routeGreen->BusStations()->attach($stationG13->id);
+        $routeGreen->Places()->attach($place12->id);
+        $routeGreen->Places()->attach($place17->id);
+        $routeGreen->Places()->attach($place20->id);
+        $routeGreen->Places()->attach($place21->id);
+        $routeGreen->Places()->attach($place22->id);
+        $routeGreen->Places()->attach($place24->id);
+        $routeGreen->Places()->attach($place26->id);
+        $routeGreen->Places()->attach($place27->id);
+        $routeGreen->save();
+
+        $routeOrange = new BusRoute();
+        $routeOrange->name = 'Orange Route';
+        $routeOrange->save();
+        $routeOrange->BusStations()->attach($stationO1->id);
+        $routeOrange->BusStations()->attach($stationO2->id);
+        $routeOrange->BusStations()->attach($stationO3->id);
+        $routeOrange->BusStations()->attach($stationO4->id);
+        $routeOrange->BusStations()->attach($stationO5->id);
+        $routeOrange->BusStations()->attach($stationO6->id);
+        $routeOrange->BusStations()->attach($stationO7->id);
+        $routeOrange->BusStations()->attach($stationO8->id);
+        $routeOrange->Places()->attach($place22->id);
+        $routeOrange->Places()->attach($place28->id);
+        $routeOrange->Places()->attach($place29->id);
+        $routeOrange->Places()->attach($place30->id);
+        $routeOrange->Places()->attach($place31->id);
+        $routeOrange->Places()->attach($place38->id);
+        $routeOrange->Places()->attach($place40->id);
+        $routeOrange->save();
+
+        $routeRed = new BusRoute();
+        $routeRed->name = 'Red Route';
+        $routeRed->save();
+        $routeRed->BusStations()->attach($stationR1->id);
+        $routeRed->BusStations()->attach($stationR2->id);
+        $routeRed->BusStations()->attach($stationR3->id);
+        $routeRed->BusStations()->attach($stationR4->id);
+        $routeRed->BusStations()->attach($stationR5->id);
+        $routeRed->BusStations()->attach($stationR6->id);
+        $routeRed->BusStations()->attach($stationR7->id);
+        $routeRed->Places()->attach($place10->id);
+        $routeRed->Places()->attach($place15->id);
+        $routeRed->Places()->attach($place17->id);
+        $routeRed->Places()->attach($place18->id);
+        $routeRed->Places()->attach($place20->id);
+        $routeRed->Places()->attach($place23->id);
+        $routeRed->Places()->attach($place25->id);
+        $routeRed->Places()->attach($place32->id);
+        $routeRed->Places()->attach($place34->id);
+        $routeRed->Places()->attach($place35->id);
+        $routeRed->Places()->attach($place42->id);
+        $routeRed->save();
+
+        $routeLightBlue = new BusRoute();
+        $routeLightBlue->name = 'LightBlue Route';
+        $routeLightBlue->save();
+        $routeLightBlue->BusStations()->attach($stationLB1->id);
+        $routeLightBlue->BusStations()->attach($stationLB2->id);
+        $routeLightBlue->BusStations()->attach($stationLB3->id);
+        $routeLightBlue->BusStations()->attach($stationLB4->id);
+        $routeLightBlue->BusStations()->attach($stationLB5->id);
+        $routeLightBlue->BusStations()->attach($stationLB6->id);
+        $routeLightBlue->BusStations()->attach($stationLB7->id);
+        $routeLightBlue->BusStations()->attach($stationLB8->id);
+        $routeLightBlue->BusStations()->attach($stationLB9->id);
+        $routeLightBlue->BusStations()->attach($stationLB1o->id);
+        $routeLightBlue->Places()->attach($place11->id);
+        $routeLightBlue->Places()->attach($place13->id);
+        $routeLightBlue->Places()->attach($place14->id);
+        $routeLightBlue->Places()->attach($place15->id);
+        $routeLightBlue->Places()->attach($place17->id);
+        $routeLightBlue->Places()->attach($place19->id);
+        $routeLightBlue->Places()->attach($place20->id);
+        $routeLightBlue->Places()->attach($place22->id);
+        $routeLightBlue->Places()->attach($place26->id);
+        $routeLightBlue->Places()->attach($place27->id);
+        $routeLightBlue->Places()->attach($place28->id);
+        $routeLightBlue->Places()->attach($place32->id);
+        $routeLightBlue->Places()->attach($place33->id);
+        $routeLightBlue->save();
+
+        $routePurple = new BusRoute();
+        $routePurple->name = 'Purple Route';
+        $routePurple->save();
+        $routePurple->BusStations()->attach($stationP1->id);
+        $routePurple->BusStations()->attach($stationP2->id);
+        $routePurple->BusStations()->attach($stationP3->id);
+        $routePurple->BusStations()->attach($stationP4->id);
+        $routePurple->BusStations()->attach($stationP5->id);
+        $routePurple->BusStations()->attach($stationP6->id);
+        $routePurple->BusStations()->attach($stationP7->id);
+        $routePurple->BusStations()->attach($stationP8->id);
+        $routePurple->BusStations()->attach($stationP9->id);
+        $routePurple->BusStations()->attach($stationP10->id);
+        $routePurple->Places()->attach($place1->id);
+        $routePurple->Places()->attach($place4->id);
+        $routePurple->Places()->attach($place9->id);
+        $routePurple->Places()->attach($place12->id);
+        $routePurple->Places()->attach($place22->id);
+        $routePurple->Places()->attach($place26->id);
+        $routePurple->Places()->attach($place27->id);
+        $routePurple->Places()->attach($place28->id);
+        $routePurple->Places()->attach($place29->id);
+        $routePurple->Places()->attach($place30->id);
+        $routePurple->Places()->attach($place36->id);
+        $routePurple->Places()->attach($place37->id);
+        $routePurple->Places()->attach($place38->id);
+        $routePurple->Places()->attach($place40->id);
+        $routePurple->Places()->attach($place43->id);
+        $routePurple->Places()->attach($place44->id);
+        $routePurple->save();
+
+        $routeBlue = new BusRoute();
+        $routeBlue->name = 'Blue Route';
+        $routeBlue->save();
+        $routeBlue->BusStations()->attach($stationB1->id);
+        $routeBlue->BusStations()->attach($stationB2->id);
+        $routeBlue->BusStations()->attach($stationB3->id);
+        $routeBlue->BusStations()->attach($stationB4->id);
+        $routeBlue->BusStations()->attach($stationB5->id);
+        $routeBlue->BusStations()->attach($stationB6->id);
+        $routeBlue->BusStations()->attach($stationB7->id);
+        $routeBlue->BusStations()->attach($stationB8->id);
+        $routeBlue->Places()->attach($place18->id);
+        $routeBlue->Places()->attach($place21->id);
+        $routeBlue->Places()->attach($place24->id);
+        $routeBlue->Places()->attach($place25->id);
+        $routeBlue->Places()->attach($place34->id);
+        $routeBlue->Places()->attach($place35->id);
+        $routeBlue->Places()->attach($place40->id);
+        $routeBlue->Places()->attach($place42->id);
+        $routeBlue->save();
+
+        //////////////////////////////stationsPurple///////////////////////
+
+        $stationP1 = new BusStation();
+        $stationP1->name = 'Nom Kased Station';
+        $stationP1->x = 18.793654;
+        $stationP1->y = 98.959380;
+        $stationP1->save();
+
+        $stationP2 = new BusStation();
+        $stationP2->name = 'Volley Ball Court 2nd F Dorm Station';
+        $stationP2->x = 18.798969;
+        $stationP2->y = 98.953428;
+        $stationP2->save();
+
+        $stationP3 = new BusStation();
+        $stationP3->name = '6th Female Dorm Station';
+        $stationP3->x = 18.797250;
+        $stationP3->y = 98.953439;
+        $stationP3->save();
+
+        $stationP4 = new BusStation();
+        $stationP4->name = 'Industry Building of Education Station';
+        $stationP4->x = 18.795445;
+        $stationP4->y = 98.954300;
+        $stationP4->save();
+
+        $stationP5 = new BusStation();
+        $stationP5->name = '1st Building of Education Station';
+        $stationP5->x = 18.793609;
+        $stationP5->y = 98.955259;
+        $stationP5->save();
+
+        $stationP6 = new BusStation();
+        $stationP6->name = 'Business Administator Station';
+        $stationP6->x = 18.793196;
+        $stationP6->y = 98.957003;
+        $stationP6->save();
+
+        $stationP7 = new BusStation();
+        $stationP7->name = 'College of Graduated Station';
+        $stationP7->x = 18.794627;
+        $stationP7->y = 98.958684;
+        $stationP7->save();
+
+        $stationP8 = new BusStation();
+        $stationP8->name = 'Central Sport Field Station';
+        $stationP8->x = 18.797143;
+        $stationP8->y = 98.957120;
+        $stationP8->save();
+
+        $stationP9 = new BusStation();
+        $stationP9->name = 'Phailom 7-Eleven Station';
+        $stationP9->x = 18.799524;
+        $stationP9->y = 98.956016;
+        $stationP9->save();
+
+        $stationP10 = new BusStation();
+        $stationP10->name = '3th Female Dorm Station';
+        $stationP10->x = 18.799377;
+        $stationP10->y = 98.952903;
+        $stationP10->save();
+
+        //////////////////////////////stationsGreen///////////////////////
+
+        $stationG1 = new BusStation();
+        $stationG1->name = 'The Front Gate CMU Station';
+        $stationG1->x = 18.807595;
+        $stationG1->y = 98.954855;
+        $stationG1->save();
+
+        $stationG2 = new BusStation();
+        $stationG2->name = 'University Office Station';
+        $stationG2->x = 18.804806;
+        $stationG2->y = 98.954474;
+        $stationG2->save();
+
+        $stationG3 = new BusStation();
+        $stationG3->name = 'The Front of Library Station';
+        $stationG3->x = 18.801608;
+        $stationG3->y = 98.951324;
+        $stationG3->save();
+
+        $stationG4 = new BusStation();
+        $stationG4->name = '3th Female Dorm Station';
+        $stationG4->x = 18.799572;
+        $stationG4->y = 98.952741;
+        $stationG4->save();
+
+        $stationG5 = new BusStation();
+        $stationG5->name = 'Volley Ball Court 2nd F Dorm Station';
+        $stationG5->x = 18.798969;
+        $stationG5->y = 98.953428;
+        $stationG5->save();
+
+        $stationG6 = new BusStation();
+        $stationG6->name = '6th Female Dorm Station';
+        $stationG6->x = 18.797250;
+        $stationG6->y = 98.953439;
+        $stationG6->save();
+
+        $stationG7 = new BusStation();
+        $stationG7->name = '1st Building of Education Station';
+        $stationG7->x = 18.793609;
+        $stationG7->y = 98.955259;
+        $stationG7->save();
+
+        $stationG8 = new BusStation();
+        $stationG8->name = 'Gate of Education Station';
+        $stationG8->x = 18.793408;
+        $stationG8->y = 98.955268;
+        $stationG8->save();
+
+        $stationG9 = new BusStation();
+        $stationG9->name = '4th Male Dorm Station';
+        $stationG9->x = 18.797935;
+        $stationG9->y = 98.953119;
+        $stationG9->save();
+
+        $stationG10 = new BusStation();
+        $stationG10->name = '3rd Female Dorm Station';
+        $stationG10->x = 18.799377;
+        $stationG10->y = 98.952903;
+        $stationG10->save();
+
+        $stationG11 = new BusStation();
+        $stationG11->name = 'Cooperative CMU Station';
+        $stationG11->x = 18.801536;
+        $stationG11->y = 98.951071;
+        $stationG11->save();
+
+        $stationG12 = new BusStation();
+        $stationG12->name = 'Salatham Station';
+        $stationG12->x = 18.804563;
+        $stationG12->y = 98.954006;
+        $stationG12->save();
+
+        $stationG13 = new BusStation();
+        $stationG13->name = 'Rugby Field Station';
+        $stationG13->x = 18.805928;
+        $stationG13->y = 98.955421;
+        $stationG13->save();
+
+        //////////////////////////////stationsOrange//////////////
+
+        $stationO1 = new BusStation();
+        $stationO1->name = 'Rhomsak Market(Faihin) Station';
+        $stationO1->x = 18.799483;
+        $stationO1->y = 98.948324;
+        $stationO1->save();
+
+        $stationO2 = new BusStation();
+        $stationO2->name = '4th Male Dorm Station';
+        $stationO2->x = 18.796873;
+        $stationO2->y = 98.952524;
+        $stationO2->save();
+
+        $stationO3 = new BusStation();
+        $stationO3->name = 'Rujirawong Swimming Pool Station';
+        $stationO3->x = 18.796329;
+        $stationO3->y = 98.955280;
+        $stationO3->save();
+
+        $stationO4 = new BusStation();
+        $stationO4->name = 'International College Station';
+        $stationO4->x = 18.796225;
+        $stationO4->y = 98.960002;
+        $stationO4->save();
+
+        $stationO5 = new BusStation();
+        $stationO5->name = '40th Years Dorm Station';
+        $stationO5->x = 18.798632;
+        $stationO5->y = 98.958637;
+        $stationO5->save();
+
+        $stationO6 = new BusStation();
+        $stationO6->name = 'Pink Dorm Station';
+        $stationO6->x = 18.798959;
+        $stationO6->y = 98.957419;
+        $stationO6->save();
+
+        $stationO7 = new BusStation();
+        $stationO7->name = 'Phailom 7-Eleven Station';
+        $stationO7->x = 18.799524;
+        $stationO7->y = 98.956016;
+        $stationO7->save();
+
+        $stationO8 = new BusStation();
+        $stationO8->name = '3rd Female Dorm Station';
+        $stationO8->x = 18.799377;
+        $stationO8->y = 98.952903;
+        $stationO8->save();
+
+        ///////////////////////////////stationsred//////////////////////
+
+        $stationR1 = new BusStation();
+        $stationR1->name = '3rd Female Dorm Station Station';
+        $stationR1->x = 18.799377;
+        $stationR1->y = 98.952903;
+        $stationR1->save();
+
+        $stationR2 = new BusStation();
+        $stationR2->name = 'Cooperative CMU Station';
+        $stationR2->x = 18.801536;
+        $stationR2->y = 98.951071;
+        $stationR2->save();
+
+        $stationR3 = new BusStation();
+        $stationR3->name = 'Social Science Station';
+        $stationR3->x = 18.803119;
+        $stationR3->y = 98.950081;
+        $stationR3->save();
+
+        $stationR4 = new BusStation();
+        $stationR4->name = 'Humanities Canteen Station';
+        $stationR4->x = 18.803967;
+        $stationR4->y = 98.948991;
+        $stationR4->save();
+
+        $stationR5 = new BusStation();
+        $stationR5->name = 'Angkaew Station';
+        $stationR5->x = 18.805309;
+        $stationR5->y = 98.950196;
+        $stationR5->save();
+
+        $stationR6 = new BusStation();
+        $stationR6->name = 'Political Science Station';
+        $stationR6->x = 18.803027;
+        $stationR6->y = 98.954401;
+        $stationR6->save();
+
+        $stationR7 = new BusStation();
+        $stationR7->name = 'Aor Mor Chor Station';
+        $stationR7->x = 18.800657;
+        $stationR7->y = 98.953587;
+        $stationR7->save();
+
+        ///////////////////////////////stationslightblue////////////////
+
+        $stationLB1 = new BusStation();
+        $stationLB1->name = '3rd Female Dorm Station Station';
+        $stationLB1->x = 18.799377;
+        $stationLB1->y = 98.952903;
+        $stationLB1->save();
+
+        $stationLB2 = new BusStation();
+        $stationLB2->name = 'Economics Station';
+        $stationLB2->x = 18.801179;
+        $stationLB2->y = 98.950379;
+        $stationLB2->save();
+
+        $stationLB3 = new BusStation();
+        $stationLB3->name = 'Mass Communication Station';
+        $stationLB3->x = 18.802283;
+        $stationLB3->y = 98.948665;
+        $stationLB3->save();
+
+        $stationLB4 = new BusStation();
+        $stationLB4->name = 'Cooperative CMU Station';
+        $stationLB4->x = 18.801509;
+        $stationLB4->y = 98.951144;
+        $stationLB4->save();
+
+        $stationLB5 = new BusStation();
+        $stationLB5->name = 'Social Science Station';
+        $stationLB5->x = 18.803119;
+        $stationLB5->y = 98.950081;
+        $stationLB5->save();
+
+        $stationLB6 = new BusStation();
+        $stationLB6->name = 'Humanities Canteen Station';
+        $stationLB6->x = 18.803967;
+        $stationLB6->y = 98.948991;
+        $stationLB6->save();
+
+        $stationLB7 = new BusStation();
+        $stationLB7->name = 'Law Station';
+        $stationLB7->x = 18.804488;
+        $stationLB7->y = 98.948132;
+        $stationLB7->save();
+
+        $stationLB8 = new BusStation();
+        $stationLB8->name = 'The Front of Library Station';
+        $stationLB8->x = 18.801608;
+        $stationLB8->y = 98.951324;
+        $stationLB8->save();
+
+        $stationLB9 = new BusStation();
+        $stationLB9->name = 'Architecture Station';
+        $stationLB9->x = 18.798060;
+        $stationLB9->y = 98.948454;
+        $stationLB9->save();
+
+        $stationLB10 = new BusStation();
+        $stationLB10->name = '4th Male Dorm Station';
+        $stationLB10->x = 18.796873;
+        $stationLB10->y = 98.952524;
+        $stationLB10->save();
+
+        ///////////////////////////////stationblue/////////////////
+
+        $stationB1 = new BusStation();
+        $stationB1->name = 'The Front Gate CMU Station';
+        $stationB1->x = 18.807595;
+        $stationB1->y = 98.954855;
+        $stationB1->save();
+
+        $stationB2 = new BusStation();
+        $stationB2->name = 'University Office Station';
+        $stationB2->x = 18.804806;
+        $stationB2->y = 98.954474;
+        $stationB2->save();
+
+        $stationB3 = new BusStation();
+        $stationB3->name = 'Political Science Station';
+        $stationB3->x = 18.803027;
+        $stationB3->y = 98.954401;
+        $stationB3->save();
+
+        $stationB4 = new BusStation();
+        $stationB4->name = 'Activity Building Station';
+        $stationB4->x = 18.800657;
+        $stationB4->y = 98.953587;
+        $stationB4->save();
+
+        $stationB5 = new BusStation();
+        $stationB5->name = '40th Years Dormitory Station';
+        $stationB5->x = 18.798632;
+        $stationB5->y = 98.958637;
+        $stationB5->save();
+
+        $stationB6 = new BusStation();
+        $stationB6->name = 'Phailom 7-Eleven Station';
+        $stationB6->x = 18.799524;
+        $stationB6->y = 98.956016;
+        $stationB6->save();
+
+        $stationB7 = new BusStation();
+        $stationB7->name = 'Aor Mor Chor Station';
+        $stationB7->x = 18.800634;
+        $stationB7->y = 98.953391;
+        $stationB7->save();
+
+        $stationB8 = new BusStation();
+        $stationB8->name = 'Salatham Opposite Post Office Station';
+        $stationB8->x = 18.804563;
+        $stationB8->y = 98.954006;
+        $stationB8->save();
+
     }
 }
