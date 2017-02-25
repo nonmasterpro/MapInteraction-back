@@ -225,7 +225,6 @@ class PlaceController extends Controller
         }
       }
 
-      $place->BusRoutes()->delete();
       $place->BusRoutes()->sync($request->routes);
       $place->save();
 
