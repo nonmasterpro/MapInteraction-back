@@ -1220,6 +1220,8 @@ class ManageController extends Controller
         $routeGreen->Places()->attach($place24->id);
         $routeGreen->Places()->attach($place26->id);
         $routeGreen->Places()->attach($place27->id);
+        $routeGreen->Places()->attach($place48->id);
+        $routeGreen->Places()->attach($place49->id);
         $routeGreen->save();
 
         $routeOrange = new BusRoute();
@@ -1240,6 +1242,8 @@ class ManageController extends Controller
         $routeOrange->Places()->attach($place31->id);
         $routeOrange->Places()->attach($place38->id);
         $routeOrange->Places()->attach($place40->id);
+        $routeOrange->Places()->attach($place45->id);
+        $routeOrange->Places()->attach($place47->id);
         $routeOrange->save();
 
         $routeRed = new BusRoute();
@@ -1291,6 +1295,9 @@ class ManageController extends Controller
         $routeLightBlue->Places()->attach($place28->id);
         $routeLightBlue->Places()->attach($place32->id);
         $routeLightBlue->Places()->attach($place33->id);
+        $routeLightBlue->Places()->attach($place47->id);
+        $routeLightBlue->Places()->attach($place48->id);
+        $routeLightBlue->Places()->attach($place49->id);
         $routeLightBlue->save();
 
         $routePurple = new BusRoute();
@@ -1322,6 +1329,8 @@ class ManageController extends Controller
         $routePurple->Places()->attach($place40->id);
         $routePurple->Places()->attach($place43->id);
         $routePurple->Places()->attach($place44->id);
+        $routePurple->Places()->attach($place48->id);
+        $routePurple->Places()->attach($place49->id);
         $routePurple->save();
 
         $routeBlue = new BusRoute();
