@@ -1300,37 +1300,7 @@ class ManageController extends Controller
         $routeLightBlue->Places()->attach($place49->id);
         $routeLightBlue->save();
 
-        $routePurple = new BusRoute();
-        $routePurple->name = 'Purple Route';
-        $routePurple->save();
-        $routePurple->BusStations()->attach($stationP1->id);
-        $routePurple->BusStations()->attach($stationP2->id);
-        $routePurple->BusStations()->attach($stationP3->id);
-        $routePurple->BusStations()->attach($stationP4->id);
-        $routePurple->BusStations()->attach($stationP5->id);
-        $routePurple->BusStations()->attach($stationP6->id);
-        $routePurple->BusStations()->attach($stationP7->id);
-        $routePurple->BusStations()->attach($stationP8->id);
-        $routePurple->BusStations()->attach($stationP9->id);
-        $routePurple->BusStations()->attach($stationP10->id);
-        $routePurple->Places()->attach($place->id);
-        $routePurple->Places()->attach($place4->id);
-        $routePurple->Places()->attach($place9->id);
-        $routePurple->Places()->attach($place12->id);
-        $routePurple->Places()->attach($place22->id);
-        $routePurple->Places()->attach($place26->id);
-        $routePurple->Places()->attach($place27->id);
-        $routePurple->Places()->attach($place28->id);
-        $routePurple->Places()->attach($place29->id);
-        $routePurple->Places()->attach($place30->id);
-        $routePurple->Places()->attach($place36->id);
-        $routePurple->Places()->attach($place37->id);
-        $routePurple->Places()->attach($place38->id);
-        $routePurple->Places()->attach($place40->id);
-        $routePurple->Places()->attach($place43->id);
-        $routePurple->Places()->attach($place44->id);
-        $routePurple->Places()->attach($place48->id);
-        $routePurple->Places()->attach($place49->id);
+      
         $routePurple = new BusRoute();
         $routePurple->name = 'Purple Route';
         $routePurple->save();
