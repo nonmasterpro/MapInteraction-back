@@ -89,11 +89,10 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
         $input = $request->all();
         $schedule = Schedule::find($id);
 
-        $schedule = new Schedule();
         $schedule->courseName = $request->courseName;
         $schedule->day = $request->day;
         $schedule->start = $request->start;
@@ -112,7 +111,7 @@ class ScheduleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    { 
+    {
         $schedule = Schedule::destroy($id);
         return response()->json($schedule);
     }
